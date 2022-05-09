@@ -6,79 +6,82 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 
 const network = NETWORK.eth;
 
-// General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
+// Metadados gerais para Ethereum
+const namePrefix = "spacesoccer";
+const description = "art of an astronaut kicking a ball in space";
+const baseUri = "ipfs://NewUriToReplace"; // Isso será substituído automaticamente
 
-// If you have selected Solana then the collection starts from 0 automatically
+// Se você selecionou Solana então a coleção começa do 0 automaticamente
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 2000,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Space scene" },
+      { name: "Space suit" },
+      { name: "Glove" },
+      { name: "Mascot" },
+      { name: "Ball" },
+      { name: "Space boot" },
+      { name: "Face" },
+      { name: "Space helmet" },
     ],
   },
 ];
 
-const shuffleLayerConfigurations = true;
+const shuffleLayerConfigurations = false;
 
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
-  smoothing: false,
+  width: 2500,
+  height: 2500,
+  smoothing: true,
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://nilsoncardoso.com.br/nft-space-soccer/", // Substitua pelo seu site ou remova esta linha se você não tiver um.
 };
 
 // NFTPort Info
 
 // ** REQUIRED **
-const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
-const LIMIT = 2; // Your API key rate limit
-const CHAIN = 'rinkeby'; // only rinkeby or polygon
+const AUTH = process.env.NFTPORT_API_KEY; // Defina isso no arquivo .env para evitar expor sua chave de API ao enviar para o Github
+const LIMIT = 2; // Seu limite de taxa de chave de API
+const CHAIN = 'rinkeby'; // apenas rinkeby ou polygon
 
-// REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'CRYPTOPUNKS';
-const CONTRACT_SYMBOL = 'CP';
-const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const TREASURY_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 1; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+// DETALHES DO CONTRATO NECESSÁRIOS QUE NÃO PODEM SER ATUALIZADOS MAIS TARDE!
+const CONTRACT_NAME = 'spacesoccer';
+const CONTRACT_SYMBOL = 'SS'; // isso e uma abreviacao do nome SpaceSoccer = SS, sacou:)
+const METADATA_UPDATABLE = false; // defina como false se você não quiser permitir atualizações de metadados após a cunhagem
+const OWNER_ADDRESS = '0xAe1345a928E9A998e894d2217e71124aDC94c2aD'; // numero da carteira metamask AQUI :)
+const TREASURY_ADDRESS = '0xAe1345a928E9A998e894d2217e71124aDC94c2aD'; // posso repetir o mesmo numero aqui
+const MAX_SUPPLY = 5000; // O número máximo de NFTs que podem ser cunhados. NÃO PODE SER ATUALIZADO!
+const MINT_PRICE = 0.001; // Aqui e o preco que quero vender -- Preço de cunhagem por NFT. Rinkeby = ETH, Polygon = MATIC. NÃO PODE SER ATUALIZADO!
+const TOKENS_PER_MINT = 10; // número máximo de NFTs que um usuário pode cunhar em uma única transação. NÃO PODE SER ATUALIZADO!
 
-// REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+// DETALHES DO CONTRATO NECESSÁRIOS QUE PODEM SER ATUALIZADOS MAIS TARDE.
+// Aqui o fuso horario e em utc -- ano mes dia hora e fuso horario
+const PUBLIC_MINT_START_DATE = "2022-05-05T11:30:48-03:00"; // Isso é necessário. Eg: 2022-02-08T11:30:48+00:00
 
-// OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
+// DETALHES OPCIONAIS DO CONTRATO QUE PODEM SER ATUALIZADOS MAIS TARDE.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
-const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0xd8B808A887326F45B2D0cd999709Aa6264CeF919"; // Address that will receive the royalty
-const BASE_URI = null; // only update if you want to manually set the base uri
-const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
-const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
+const ROYALTY_SHARE = 500; // Porcentagem do preço do token que vai para o endereço de royalties. 100 bps = 1%
+const ROYALTY_ADDRESS = "0xAe1345a928E9A998e894d2217e71124aDC94c2aD"; // Endereço que receberá os royalties
+const BASE_URI = null; // atualize apenas se você quiser definir manualmente o uri base
+const PREREVEAL_TOKEN_URI = null; // atualize apenas se você quiser definir manualmente o token de pré-revelação uri
+const PRESALE_WHITELISTED_ADDRESSES = []; // atualize apenas se você quiser definir manualmente os endereços da lista de permissões
 
 // ** OPTIONAL **
-let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
+let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // Se você quiser incluí-lo manualmente
 
-// Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
-const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
+// Metadados genéricos são opcionais se você quiser revelar seus NFTs
+const GENERIC = false; // Defina como true se você deseja fazer upload de metas genéricas e revelar os NFTs reais no futuro
+const GENERIC_TITLE = CONTRACT_NAME; // Substitua pelo que você deseja que os títulos genéricos digam se desejar que seja diferente do nome do contrato.
+const GENERIC_DESCRIPTION = "REPLACE THIS"; // Substitua pelo que você deseja que as descrições genéricas digam.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Substitua por sua imagem genérica que será exibida para todas as pré-revelações de NFTs.
 
-// Automatically set contract address if deployed using the deployContract.js script
+// Defina automaticamente o endereço do contrato se implantado usando o script deployContract.js
 try {
   const rawContractData = fs.readFileSync(
     `${basePath}/build/contract/_contract.json`
@@ -88,7 +91,7 @@ try {
     CONTRACT_ADDRESS = contractData.contract_address;
   }
 } catch (error) {
-  // Do nothing, falling back to manual contract address
+  // Não faça nada, voltando ao endereço do contrato manual
 }
 // END NFTPort Info
 
