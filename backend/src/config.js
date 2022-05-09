@@ -48,7 +48,7 @@ const extraMetadata = {
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Defina isso no arquivo .env para evitar expor sua chave de API ao enviar para o Github
 const LIMIT = 2; // Seu limite de taxa de chave de API
-const CHAIN = 'rinkeby'; // apenas rinkeby ou polygon
+const CHAIN = 'polygon'; // apenas rinkeby ou polygon
 
 // DETALHES DO CONTRATO NECESSÁRIOS QUE NÃO PODEM SER ATUALIZADOS MAIS TARDE!
 const CONTRACT_NAME = 'spacesoccer';
@@ -57,12 +57,12 @@ const METADATA_UPDATABLE = false; // defina como false se você não quiser perm
 const OWNER_ADDRESS = '0xAe1345a928E9A998e894d2217e71124aDC94c2aD'; // numero da carteira metamask AQUI :)
 const TREASURY_ADDRESS = '0xAe1345a928E9A998e894d2217e71124aDC94c2aD'; // posso repetir o mesmo numero aqui
 const MAX_SUPPLY = 5000; // O número máximo de NFTs que podem ser cunhados. NÃO PODE SER ATUALIZADO!
-const MINT_PRICE = 0.001; // Aqui e o preco que quero vender -- Preço de cunhagem por NFT. Rinkeby = ETH, Polygon = MATIC. NÃO PODE SER ATUALIZADO!
+const MINT_PRICE = 8; // Aqui e o preco que quero vender -- Preço de cunhagem por NFT. Rinkeby = ETH, Polygon = MATIC. NÃO PODE SER ATUALIZADO!
 const TOKENS_PER_MINT = 10; // número máximo de NFTs que um usuário pode cunhar em uma única transação. NÃO PODE SER ATUALIZADO!
 
 // DETALHES DO CONTRATO NECESSÁRIOS QUE PODEM SER ATUALIZADOS MAIS TARDE.
 // Aqui o fuso horario e em utc -- ano mes dia hora e fuso horario
-const PUBLIC_MINT_START_DATE = "2022-05-05T11:30:48-03:00"; // Isso é necessário. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-05-09T11:30:48-03:00"; // Isso é necessário. Eg: 2022-02-08T11:30:48+00:00
 
 // DETALHES OPCIONAIS DO CONTRATO QUE PODEM SER ATUALIZADOS MAIS TARDE.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
