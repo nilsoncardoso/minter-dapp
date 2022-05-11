@@ -1,5 +1,5 @@
-const contractAddress = "0x90b92a5B79DC8A6f5Bf35de7e80DDD322D6753BC"; //Replace with your own contract address
-const chain = 'rinkeby'; // rinkeby or polygon
+const contractAddress = "0xe43B024258201AF6A74dC9E73DDE8c95741E612e"; //Replace with your own contract address
+const chain = 'polygon'; // rinkeby or polygon
 
 const welcome_h1 = "Welcome to the SpaceSoccer NFT Project!!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
