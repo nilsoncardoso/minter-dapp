@@ -57,7 +57,7 @@ const METADATA_UPDATABLE = false; // defina como false se você não quiser perm
 const OWNER_ADDRESS = '0xAe1345a928E9A998e894d2217e71124aDC94c2aD'; // numero da carteira metamask AQUI :)
 const TREASURY_ADDRESS = '0xAe1345a928E9A998e894d2217e71124aDC94c2aD'; // posso repetir o mesmo numero aqui
 const MAX_SUPPLY = 2000; // O número máximo de NFTs que podem ser cunhados. NÃO PODE SER ATUALIZADO!
-const MINT_PRICE = 7; // Aqui e o preco que quero vender -- Preço de cunhagem por NFT. Rinkeby = ETH, Polygon = MATIC. NÃO PODE SER ATUALIZADO!
+const MINT_PRICE = 5; // Aqui e o preco que quero vender -- Preço de cunhagem por NFT. Rinkeby = ETH, Polygon = MATIC. NÃO PODE SER ATUALIZADO!
 const TOKENS_PER_MINT = 10; // número máximo de NFTs que um usuário pode cunhar em uma única transação. NÃO PODE SER ATUALIZADO!
 
 // DETALHES DO CONTRATO NECESSÁRIOS QUE PODEM SER ATUALIZADOS MAIS TARDE.
@@ -66,7 +66,7 @@ const PUBLIC_MINT_START_DATE = "2022-05-10T11:30:48+00:00"; // Isso é necessár
 
 // DETALHES OPCIONAIS DO CONTRATO QUE PODEM SER ATUALIZADOS MAIS TARDE.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
-const ROYALTY_SHARE = 500; // Porcentagem do preço do token que vai para o endereço de royalties. 100 bps = 1%
+const ROYALTY_SHARE = 700; // Porcentagem do preço do token que vai para o endereço de royalties. 100 bps = 1%
 const ROYALTY_ADDRESS = "0xAe1345a928E9A998e894d2217e71124aDC94c2aD"; // Endereço que receberá os royalties
 const BASE_URI = null; // atualize apenas se você quiser definir manualmente o uri base
 const PREREVEAL_TOKEN_URI = null; // atualize apenas se você quiser definir manualmente o token de pré-revelação uri
