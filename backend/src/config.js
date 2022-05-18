@@ -70,7 +70,7 @@ const ROYALTY_SHARE = 700; // Porcentagem do preço do token que vai para o ende
 const ROYALTY_ADDRESS = "0xAe1345a928E9A998e894d2217e71124aDC94c2aD"; // Endereço que receberá os royalties
 const BASE_URI = null; // atualize apenas se você quiser definir manualmente o uri base
 const PREREVEAL_TOKEN_URI = null; // atualize apenas se você quiser definir manualmente o token de pré-revelação uri
-const PRESALE_WHITELISTED_ADDRESSES = ["0xAe1345a928E9A998e894d2217e71124aDC94c2aD"]; // atualize apenas se você quiser definir manualmente os endereços da lista de permissões
+const PRESALE_WHITELISTED_ADDRESSES = []; // atualize apenas se você quiser definir manualmente os endereços da lista de permissões
 
 // ** OPTIONAL **
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // Se você quiser incluí-lo manualmente
